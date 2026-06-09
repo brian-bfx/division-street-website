@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-white font-sans text-base leading-[1.6] tracking-normal text-navy antialiased md:text-[1.125rem];
+  }
+
+  /* Brick accent links in body copy */
+  a:not([class]) {
+    @apply text-brick underline-offset-2 transition-colors duration-micro hover:underline;
+  }
+}
+
+@layer components {
+  /* Typography scale — fluid clamp() (see lib/design-system/typography.ts) */
+  .text-display-hero {
+    @apply font-display text-type-hero font-semibold text-navy;
+  }
+
+  .text-display-section {
+    @apply font-display text-type-section font-semibold text-navy;
+  }
+
+  .text-display-subsection {
+    @apply font-display text-type-subsection font-semibold text-navy;
+  }
+
+  .text-subhead {
+    @apply text-lg leading-[1.6] text-navy/70 md:text-xl;
+  }
+
+  .font-tnum {
+    font-feature-settings: "tnum";
+  }
+
+  /* Cubs-inspired pinstripe — use sparingly behind card grids */
+  .bg-pinstripe {
+    @apply bg-white;
+    background-image: repeating-linear-gradient(
+      90deg,
+      #ffffff,
+      #ffffff 12px,
+      rgb(14 51 134 / 0.06) 12px,
+      rgb(14 51 134 / 0.06) 13px
+    );
+  }
+
+  /* Card base — soft elevation, approachable radius */
+  .card {
+    @apply rounded-card-lg border border-navy/10 bg-white p-8 shadow-card transition-all duration-micro md:p-10;
+  }
+
+  /* Content block below a section header */
+  .section-content {
+    @apply mt-14 md:mt-16;
+  }
+
+  .card-interactive {
+    @apply card hover:-translate-y-0.5 hover:shadow-card-hover;
+  }
+
+  /* Form fields */
+  .form-label {
+    @apply mb-2 block text-base font-medium text-navy;
+  }
+
+  .form-input {
+    @apply w-full min-h-11 rounded-button border border-navy/20 bg-white px-4 py-3 text-base text-navy transition-colors duration-micro focus:border-brick focus:outline-none focus:ring-2 focus:ring-brick focus:ring-offset-2;
+  }
+
+  .form-error {
+    @apply mt-2 text-sm text-brick;
+  }
+}

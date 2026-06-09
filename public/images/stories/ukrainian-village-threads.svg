@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500" role="img" aria-label="Ukrainian Village Threads boutique in Ukrainian Village, Chicago">
+  <rect width="800" height="500" fill="#1A2B4A"/>
+  <rect x="80" y="120" width="640" height="280" rx="12" fill="#F2F2F2"/>
+  <rect x="500" y="160" width="180" height="200" rx="8" fill="#C0392B" opacity="0.85"/>
+  <text x="400" y="270" text-anchor="middle" fill="#1A2B4A" font-family="system-ui,sans-serif" font-size="26" font-weight="700">Ukrainian Village Threads</text>
+  <text x="400" y="310" text-anchor="middle" fill="#1A2B4A" font-family="system-ui,sans-serif" font-size="18" opacity="0.7">Ukrainian Village, Chicago</text>
+</svg>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-label="Wicker Park neighborhood storefronts, Chicago">
+  <rect width="1200" height="675" fill="#1A2B4A"/>
+  <rect x="60" y="180" width="1080" height="360" rx="16" fill="#F2F2F2"/>
+  <rect x="100" y="220" width="240" height="280" rx="8" fill="#C0392B" opacity="0.7"/>
+  <rect x="380" y="240" width="200" height="240" rx="8" fill="#1A2B4A" opacity="0.15"/>
+  <rect x="620" y="220" width="240" height="280" rx="8" fill="#C0392B" opacity="0.5"/>
+  <rect x="900" y="250" width="200" height="220" rx="8" fill="#1A2B4A" opacity="0.15"/>
+  <text x="600" y="620" text-anchor="middle" fill="#F2F2F2" font-family="system-ui,sans-serif" font-size="24" font-weight="600">Wicker Park, Chicago</text>
+</svg>

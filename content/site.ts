@@ -1,0 +1,48 @@
+export const site = {
+  name: "Division Street Digital",
+  tagline: "Local marketing systems for Chicago small businesses",
+  description:
+    "Local marketing for Chicago neighborhood businesses. Get found, trusted, and contacted across Google, Maps, reviews, ads, and your website — built around calls, visits, and bookings.",
+  email: "hello@divisionstreetdigital.com",
+  phone: "(312) 555-0100",
+  phoneTel: "+13125550100",
+  neighborhoodLine:
+    "Proudly serving Wicker Park, Bucktown, and the surrounding Chicago neighborhoods.",
+  serviceArea: {
+    primary: "Wicker Park, Chicago, IL",
+    neighborhoods: [
+      "Wicker Park",
+      "Bucktown",
+      "Ukrainian Village",
+      "Logan Square",
+      "West Town",
+    ],
+    region: "Chicago, Illinois",
+  },
+  serviceTypes: [
+    "Local SEO",
+    "Google Business Profile management",
+    "Social media management",
+    "Review generation",
+    "Small business websites",
+  ],
+  nav: [
+    { label: "Services", href: "/services" },
+    { label: "Areas", href: "/areas" },
+    { label: "Stories", href: "/stories" },
+    { label: "Pricing", href: "/pricing" },
+  ],
+  footerLinks: [
+    { label: "About", href: "/about" },
+    { label: "Blog", href: "/blog" },
+    { label: "Contact", href: "/contact" },
+    { label: "Privacy", href: "/privacy" },
+  ],
+  footerNote: "Local marketing, done right. Month-to-month, no long contracts.",
+  wordmark: "DIVISION STREET DIGITAL",
+  url: "https://divisionstreetdigital.com",
+  founder: {
+    name: "Brian Feener",
+    role: "Founder",
+  },
+} as const;

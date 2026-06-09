@@ -1,0 +1,50 @@
+# Division Street Digital
+
+> Local marketing for small businesses in Wicker Park, Bucktown, and Chicago neighborhoods.
+
+## About
+
+Division Street Digital is a local marketing agency serving small businesses in Chicago's Wicker Park, Bucktown, Ukrainian Village, Logan Square, and West Town neighborhoods. We help neighborhood shops get found, trusted, and contacted across Google, Maps, reviews, ads, and websites — with Google Business Profile management, local SEO, social media, review generation, and small business websites. Month-to-month plans with no long contracts.
+
+## Contact
+
+- Website: https://divisionstreetdigital.com
+- Email: hello@divisionstreetdigital.com
+- Phone: (312) 555-0100
+- Service area: Wicker Park, Bucktown, Ukrainian Village, Logan Square, West Town — Chicago, Illinois
+
+## Services
+
+- Local marketing systems for Chicago small businesses
+- Local SEO for Chicago small businesses
+- Google Business Profile management
+- Social media management for local shops
+- Review and reputation management
+- Small business websites
+
+## Key pages
+
+- https://divisionstreetdigital.com/ — Homepage
+- https://divisionstreetdigital.com/about — About Division Street Digital
+- https://divisionstreetdigital.com/services — Services overview
+- https://divisionstreetdigital.com/services/local-marketing — Local marketing
+- https://divisionstreetdigital.com/services/local-seo — Local SEO
+- https://divisionstreetdigital.com/services/google-business-profile — Google Business Profile
+- https://divisionstreetdigital.com/services/social-media — Social media
+- https://divisionstreetdigital.com/services/reviews-reputation — Reviews
+- https://divisionstreetdigital.com/services/websites — Websites
+- https://divisionstreetdigital.com/areas — Areas we serve
+- https://divisionstreetdigital.com/areas/wicker-park — Wicker Park marketing
+- https://divisionstreetdigital.com/areas/bucktown — Bucktown marketing
+- https://divisionstreetdigital.com/pricing — Pricing plans
+- https://divisionstreetdigital.com/stories — Client stories
+- https://divisionstreetdigital.com/blog — Local marketing guides
+- https://divisionstreetdigital.com/contact — Contact
+
+## Off-site checklist (for business owner)
+
+1. Google Business Profile — category Marketing Agency; service areas matching neighborhoods above; same NAP as website
+2. Google Search Console — submit sitemap at https://divisionstreetdigital.com/sitemap.xml
+3. Bing Webmaster Tools — submit sitemap for Bing Copilot visibility
+4. Local directories — Yelp, Apple Business Connect, Bing Places, Chicago Chamber
+5. Neighborhood presence — Wicker Park Chamber, local business spotlights, Nextdoor business page

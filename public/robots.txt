@@ -1,0 +1,8 @@
+# https://divisionstreetdigital.com/robots.txt
+# AI summary: https://divisionstreetdigital.com/llms.txt
+
+User-agent: *
+Allow: /
+Disallow: /api/
+
+Sitemap: https://divisionstreetdigital.com/sitemap.xml
