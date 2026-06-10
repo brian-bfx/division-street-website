@@ -120,6 +120,11 @@ export const plans: Plan[] = [
         description:
           "A dedicated check-in to review what's working and plan the next move together.",
       },
+      {
+        title: "Multi-location GBP management and reporting",
+        description:
+          "One dashboard for every location — profiles optimized and performance reported across the board.",
+      },
     ],
     isPopular: false,
     ctaLabel: "Select plan",
@@ -146,6 +151,7 @@ export const diagnosticOffer: DiagnosticOffer = {
   features: [
     "Google Business Profile review — know if you're showing up when neighbors search",
     "Top local search opportunities in your neighborhood",
+    "Local keyword map — the 10–15 terms most likely to drive foot traffic in your area",
     "Competitor comparison — who's beating you and why",
     "Review & reputation analysis",
     "Website conversion review — where visitors drop off before calling or booking",
