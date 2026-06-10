@@ -1,12 +1,13 @@
-import Link from "next/link";
 import { Button } from "@/components/Button";
-import { ImageCard, PageHero } from "@/components/ds";
+import { PageHero } from "@/components/ds";
 import { Eyebrow } from "@/components/Eyebrow";
+import { ExpertiseAccordion } from "@/components/ExpertiseAccordion";
 import { Reveal } from "@/components/Reveal";
 import { Section } from "@/components/Section";
+import { SectionHeader } from "@/components/ds/SectionHeader";
 import { allServices, featuredService, servicesHub } from "@/content/services";
-import { images, getServiceImage } from "@/content/images";
-import { layout } from "@/lib/design-system/layout";
+import { images } from "@/content/images";
+import { buildExpertiseFromServices } from "@/lib/expertise";
 import { createPageMetadata } from "@/lib/metadata";
 
 export const metadata = createPageMetadata({
@@ -20,10 +21,12 @@ export const metadata = createPageMetadata({
   ],
 });
 
-export default function ServicesPage() {
+export default async function ServicesPage() {
+  const expertiseItems = await buildExpertiseFromServices(allServices);
+
   return (
     <>
-      <Section hero>
+      <Section hero tightBottom>
         <PageHero
           breadcrumbs={[{ name: "Services", path: "/services" }]}
           eyebrow={servicesHub.eyebrow}
@@ -34,7 +37,7 @@ export default function ServicesPage() {
         />
       </Section>
 
-      <Section background="warm" spacing="compact" className="!pt-0">
+      <Section background="warm" spacing="intro">
         <Reveal>
           <div className="card mx-auto max-w-3xl border-brick text-center">
             <Eyebrow className="mb-2 block">{featuredService.title}</Eyebrow>
@@ -53,34 +56,14 @@ export default function ServicesPage() {
         </Reveal>
       </Section>
 
-      <Section background="pinstripe" className="!pt-0">
-        <div className={layout.gridCards}>
-          {allServices.map((service, i) => (
-            <Reveal key={service.slug} delay={i * 80}>
-              <Link
-                href={`/services/${service.slug}`}
-                className="block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brick focus-visible:ring-offset-2"
-              >
-                <ImageCard
-                  image={getServiceImage(service.slug)}
-                  interactive
-                  flushImage
-                >
-                  <Eyebrow className="mb-2 block">{service.title}</Eyebrow>
-                  <h2 className="font-display text-2xl font-bold text-navy">
-                    {service.headline}
-                  </h2>
-                  <p className="mt-4 text-base leading-relaxed text-navy/70">
-                    {service.metaDescription}
-                  </p>
-                  <p className="mt-4 text-base font-medium text-brick">
-                    Learn more →
-                  </p>
-                </ImageCard>
-              </Link>
-            </Reveal>
-          ))}
-        </div>
+      <Section background="warm" className="!pt-0">
+        <SectionHeader
+          align="left"
+          eyebrow="Our expertise"
+          headline="Everything we build for local businesses"
+          subhead="The deliverables we handle for each service — from Google visibility to websites that convert."
+        />
+        <ExpertiseAccordion items={expertiseItems} expandAll />
       </Section>
     </>
   );

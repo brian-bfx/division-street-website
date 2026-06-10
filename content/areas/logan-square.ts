@@ -3,6 +3,7 @@ import type { Area } from "./types";
 export const loganSquare: Area = {
   slug: "logan-square",
   name: "Logan Square",
+  region: "Logan Square",
   headline: "Marketing for Logan Square Small Businesses",
   metaDescription:
     "Local marketing for Logan Square, Chicago small businesses. Local SEO, Google Business Profile, social media, and reviews for shops along Milwaukee Ave and Logan Blvd.",

@@ -11,21 +11,23 @@
  */
 
 export const layout = {
-  container: "mx-auto max-w-content px-6 sm:px-8 lg:px-10",
+  container: "mx-auto max-w-content px-8 sm:px-12 lg:px-16 xl:px-20",
   containerSafe:
-    "mx-auto max-w-content px-6 sm:px-8 lg:px-10 [padding-left:max(1.5rem,env(safe-area-inset-left))] [padding-right:max(1.5rem,env(safe-area-inset-right))] sm:[padding-left:max(2rem,env(safe-area-inset-left))] sm:[padding-right:max(2rem,env(safe-area-inset-right))]",
-  sectionDefault: "py-20 md:py-28 lg:py-32",
-  sectionHero: "py-24 md:py-32 lg:py-36",
-  sectionCompact: "py-16 md:py-24",
+    "mx-auto max-w-content px-8 sm:px-12 lg:px-16 xl:px-20 [padding-left:max(2rem,env(safe-area-inset-left))] [padding-right:max(2rem,env(safe-area-inset-right))] sm:[padding-left:max(3rem,env(safe-area-inset-left))] sm:[padding-right:max(3rem,env(safe-area-inset-right))] lg:[padding-left:max(4rem,env(safe-area-inset-left))] lg:[padding-right:max(4rem,env(safe-area-inset-right))]",
+  sectionDefault: "py-24 md:py-32 lg:py-40",
+  sectionHero: "py-28 md:py-36 lg:py-44",
+  sectionCompact: "py-20 md:py-28",
+  /** First content section after a PageHero — top padding without the hero bottom gap */
+  sectionIntro: "pt-16 md:pt-20 pb-20 md:pb-28",
   /** Space between a section header and the content below it */
-  sectionContent: "mt-14 md:mt-16",
-  sectionContentLg: "mt-16 md:mt-20",
-  stack: "flex flex-col gap-8",
-  stackMd: "flex flex-col gap-10",
-  gridCards: "grid gap-8 md:grid-cols-2 md:gap-10",
-  gridCardsLg: "grid gap-8 md:gap-10 lg:grid-cols-3 lg:gap-12",
+  sectionContent: "mt-16 md:mt-20",
+  sectionContentLg: "mt-20 md:mt-24",
+  stack: "flex flex-col gap-10",
+  stackMd: "flex flex-col gap-12",
+  gridCards: "grid gap-10 md:grid-cols-2 md:gap-12",
+  gridCardsLg: "grid gap-10 md:gap-12 lg:grid-cols-3 lg:gap-14",
   touchTarget: "min-h-11 min-w-11",
 } as const;
 
 export type SectionBackground = "white" | "warm" | "navy" | "pinstripe";
-export type SectionSpacing = "default" | "compact" | "hero";
+export type SectionSpacing = "default" | "compact" | "hero" | "intro";

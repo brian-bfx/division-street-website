@@ -3,6 +3,8 @@ import type { Faq } from "@/content/pricing";
 export type Area = {
   slug: string;
   name: string;
+  /** Chicago community area — shown in the areas index table */
+  region: string;
   headline: string;
   metaDescription: string;
   /** Key in content/images.ts → areas */

@@ -16,7 +16,7 @@ export const metadata = createPageMetadata({
 export default function ContactPage() {
   return (
     <>
-      <Section hero>
+      <Section hero tightBottom>
         <PageHero
           eyebrow={contactPage.eyebrow}
           headline={contactPage.headline}
@@ -24,7 +24,7 @@ export default function ContactPage() {
         />
       </Section>
 
-      <Section background="warm" spacing="compact" className="!pt-0">
+      <Section background="warm" spacing="intro">
         <FormLayout
           mobileImage={images.contact.hero}
           sidebarImage={images.contact.sidebar}

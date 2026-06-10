@@ -27,7 +27,7 @@ function SignupFormFallback() {
 export default function SignupPage() {
   return (
     <>
-      <Section hero>
+      <Section hero tightBottom>
         <PageHero
           eyebrow={signupPage.eyebrow}
           headline={signupPage.headline}
@@ -35,7 +35,7 @@ export default function SignupPage() {
         />
       </Section>
 
-      <Section background="warm" spacing="compact" className="!pt-0">
+      <Section background="warm" spacing="intro">
         <FormLayout
           mobileImage={images.signup.hero}
           sidebarImage={images.signup.sidebar}

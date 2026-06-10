@@ -27,7 +27,7 @@ export function Button({
   external = false,
 }: ButtonProps) {
   const baseStyles =
-    "inline-flex min-h-11 items-center justify-center rounded-button px-8 py-4 text-base font-semibold transition-all duration-micro hover:-translate-y-0.5 hover:shadow-card focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2";
+    "inline-flex min-h-12 items-center justify-center rounded-button px-10 py-4 text-base font-semibold transition-all duration-micro hover:-translate-y-0.5 hover:shadow-card focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2";
 
   const combinedClassName = `${baseStyles} ${variantStyles[variant]} ${className}`;
 

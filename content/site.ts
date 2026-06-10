@@ -7,7 +7,7 @@ export const site = {
   phone: "(312) 555-0100",
   phoneTel: "+13125550100",
   neighborhoodLine:
-    "Proudly serving Wicker Park, Bucktown, and the surrounding Chicago neighborhoods.",
+    "Proudly serving Wicker Park, Bucktown, Lincoln Park, Lakeview, and neighborhoods across Chicago.",
   serviceArea: {
     primary: "Wicker Park, Chicago, IL",
     neighborhoods: [
@@ -16,6 +16,14 @@ export const site = {
       "Ukrainian Village",
       "Logan Square",
       "West Town",
+      "Lincoln Park",
+      "Lakeview",
+      "Andersonville",
+      "Ravenswood",
+      "Humboldt Park",
+      "Pilsen",
+      "Lincoln Square",
+      "Roscoe Village",
     ],
     region: "Chicago, Illinois",
   },
@@ -39,6 +47,7 @@ export const site = {
     { label: "Privacy", href: "/privacy" },
   ],
   footerNote: "Local marketing, done right. Month-to-month, no long contracts.",
+  madeInChicago: "Proudly made in Chicago",
   wordmark: "DIVISION STREET DIGITAL",
   url: "https://divisionstreetdigital.com",
   founder: {

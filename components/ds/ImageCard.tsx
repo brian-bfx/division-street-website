@@ -1,6 +1,6 @@
 import type { ImageSlot } from "@/content/images";
 import type { ImagePattern } from "@/lib/design-system/images";
-import { MediaImage } from "./MediaImage";
+import { ResolvedMediaImage } from "./ResolvedMediaImage";
 
 type ImageCardProps = {
   image: ImageSlot;
@@ -28,19 +28,19 @@ export function ImageCard({
 
   return (
     <article
-      className={`overflow-hidden rounded-card-lg border border-navy/10 bg-white shadow-card ${interactiveClass} ${className}`}
+      className={`overflow-hidden rounded-photo border border-navy/10 bg-white shadow-card ${interactiveClass} ${className}`}
     >
-      <MediaImage
+      <ResolvedMediaImage
         {...image}
         pattern={pattern}
         rounded={!flushImage}
         className={
           flushImage
-            ? "rounded-none rounded-t-card-lg border-0 shadow-none"
+            ? "rounded-none rounded-t-photo border-0 shadow-none"
             : "m-0"
         }
       />
-      <div className="p-8 md:p-10">{children}</div>
+      <div className="p-10 md:p-12">{children}</div>
     </article>
   );
 }

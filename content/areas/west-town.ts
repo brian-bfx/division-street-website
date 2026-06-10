@@ -3,6 +3,7 @@ import type { Area } from "./types";
 export const westTown: Area = {
   slug: "west-town",
   name: "West Town",
+  region: "Near West Side",
   headline: "Marketing for West Town Small Businesses",
   metaDescription:
     "Local marketing for West Town, Chicago small businesses. Local SEO, Google Business Profile, social media, and reviews for shops along Chicago Ave, Grand Ave, and West Town corridors.",

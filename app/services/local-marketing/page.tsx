@@ -45,7 +45,7 @@ export default function LocalMarketingPage() {
         ]}
       />
 
-      <Section hero>
+      <Section hero tightBottom>
         <PageHero
           breadcrumbs={[
             { name: "Services", path: "/services" },
@@ -61,7 +61,7 @@ export default function LocalMarketingPage() {
         />
       </Section>
 
-      <Section background="warm" spacing="compact" className="!pt-0">
+      <Section background="warm" spacing="intro">
         <FeatureSplit image={images.services.problem} imagePattern="card">
           <h2 className="text-display-section">{problem.headline}</h2>
           <div className="mt-6 space-y-4 text-base leading-relaxed text-navy/80">

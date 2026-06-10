@@ -7,7 +7,7 @@ import {
   HeroEntranceItem,
 } from "@/components/motion/HeroEntrance";
 import { typography } from "@/lib/design-system/typography";
-import { MediaImage } from "./MediaImage";
+import { ResolvedMediaImage } from "./ResolvedMediaImage";
 
 type BreadcrumbItem = { name: string; path: string };
 
@@ -54,7 +54,7 @@ export function PageHero({
   const ctaBlock =
     ctas ??
     (primaryCta || secondaryCta ? (
-      <div className={`mt-10 flex flex-col gap-4 sm:flex-row sm:gap-5 ${alignCta}`}>
+      <div className={`mt-12 flex flex-col gap-4 sm:flex-row sm:gap-6 ${alignCta}`}>
         {primaryCta && (
           <Button href={primaryCta.href} variant="primary">
             {primaryCta.label}
@@ -99,7 +99,7 @@ export function PageHero({
       {image && layout === "stacked" && (
         <HeroEntranceItem>
           <div className="mt-10">
-            <MediaImage
+            <ResolvedMediaImage
               {...image}
               pattern="hero"
               priority={imagePriority}
@@ -139,7 +139,7 @@ export function PageHero({
           </div>
         </HeroEntranceItem>
         <HeroEntranceItem className="order-1 lg:order-2">
-          <MediaImage
+          <ResolvedMediaImage
             {...image}
             pattern="hero"
             priority={imagePriority}

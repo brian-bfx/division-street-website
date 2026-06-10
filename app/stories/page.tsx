@@ -2,7 +2,7 @@ import { Button } from "@/components/Button";
 import { PageHero, SectionHeader } from "@/components/ds";
 import { Reveal } from "@/components/Reveal";
 import { Section } from "@/components/Section";
-import { StoryCard } from "@/components/StoryCard";
+import { CaseStudyCard } from "@/components/CaseStudyCard";
 import { images } from "@/content/images";
 import { stories, storiesPage } from "@/content/stories";
 import { createPageMetadata } from "@/lib/metadata";
@@ -17,7 +17,7 @@ export const metadata = createPageMetadata({
 export default function StoriesPage() {
   return (
     <>
-      <Section hero>
+      <Section hero tightBottom>
         <PageHero
           eyebrow={storiesPage.eyebrow}
           headline={storiesPage.headline}
@@ -27,10 +27,10 @@ export default function StoriesPage() {
         />
       </Section>
 
-      <Section background="warm" className="!pt-0">
+      <Section background="warm" spacing="intro">
         <div className="space-y-8 md:space-y-12">
           {stories.map((story, index) => (
-            <StoryCard key={story.slug} story={story} index={index} />
+            <CaseStudyCard key={story.slug} story={story} index={index} />
           ))}
         </div>
       </Section>

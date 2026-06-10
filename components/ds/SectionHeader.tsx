@@ -21,7 +21,7 @@ export function SectionHeader({
 }: SectionHeaderProps) {
   const alignClass =
     align === "center" ? "mx-auto max-w-prose text-center" : "text-center md:text-left";
-  const spacingClass = spaced ? "mb-14 md:mb-16" : "";
+  const spacingClass = spaced ? "mb-16 md:mb-20" : "";
 
   return (
     <div className={`${alignClass} ${spacingClass} ${className}`}>

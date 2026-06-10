@@ -58,7 +58,7 @@ export default function StoryDetailPage({ params }: Props) {
         })}
       />
 
-      <Section hero>
+      <Section hero tightBottom>
         <PageHero
           breadcrumbs={[
             { name: "Client Stories", path: "/stories" },
@@ -70,7 +70,7 @@ export default function StoryDetailPage({ params }: Props) {
         />
       </Section>
 
-      <Section background="warm" spacing="compact" className="!pt-0">
+      <Section background="warm" spacing="intro">
         <div className="mx-auto max-w-prose text-base leading-relaxed text-navy/80">
           {story.services?.length ? (
             <div className="mb-8">

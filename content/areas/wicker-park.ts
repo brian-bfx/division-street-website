@@ -3,6 +3,7 @@ import type { Area } from "./types";
 export const wickerPark: Area = {
   slug: "wicker-park",
   name: "Wicker Park",
+  region: "Near West Side",
   headline: "Marketing for Wicker Park Small Businesses",
   metaDescription:
     "Local marketing for Wicker Park, Chicago small businesses. Google Business Profile, local SEO, social media, and reviews for shops on Damen Ave, Milwaukee Ave, and North Ave.",
@@ -25,7 +26,6 @@ export const wickerPark: Area = {
     "social-media",
     "reviews-reputation",
   ],
-  featuredStorySlug: "damen-grounds-coffee",
   faqs: [
     {
       question: "Do you work with businesses in Wicker Park?",

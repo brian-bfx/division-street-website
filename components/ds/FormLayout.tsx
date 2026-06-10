@@ -1,6 +1,6 @@
 import type { ImageSlot } from "@/content/images";
 import { Reveal } from "@/components/Reveal";
-import { MediaImage } from "./MediaImage";
+import { ResolvedMediaImage } from "./ResolvedMediaImage";
 
 type FormLayoutProps = {
   mobileImage: ImageSlot;
@@ -19,7 +19,7 @@ export function FormLayout({
     <div className="mx-auto grid max-w-4xl items-start gap-10 lg:grid-cols-5 lg:gap-20">
       <div className="lg:col-span-3">
         <Reveal>
-          <MediaImage
+          <ResolvedMediaImage
             {...mobileImage}
             pattern="card"
             className="mb-10 w-full lg:hidden"
@@ -33,7 +33,11 @@ export function FormLayout({
         )}
       </div>
       <Reveal delay={160} className="hidden lg:col-span-2 lg:block">
-        <MediaImage {...sidebarImage} pattern="portrait" className="w-full" />
+        <ResolvedMediaImage
+          {...sidebarImage}
+          pattern="portrait"
+          className="w-full"
+        />
       </Reveal>
     </div>
   );

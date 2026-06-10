@@ -1,5 +1,5 @@
 import type { ImageSlot } from "@/content/images";
-import { MediaImage } from "@/components/ds/MediaImage";
+import { ResolvedMediaImage } from "@/components/ds/ResolvedMediaImage";
 import { Eyebrow } from "@/components/Eyebrow";
 
 type StoryGalleryProps = {
@@ -14,7 +14,7 @@ export function StoryGallery({ images }: StoryGalleryProps) {
       <Eyebrow className="mb-6 block">Project visuals</Eyebrow>
       <div className="grid gap-6 sm:grid-cols-2">
         {images.map((image) => (
-          <MediaImage
+          <ResolvedMediaImage
             key={image.label}
             {...image}
             pattern="card"

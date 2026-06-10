@@ -1,16 +1,14 @@
 import { AddOnList } from "@/components/AddOnList";
 import { Button } from "@/components/Button";
-import { PageHero, SectionHeader } from "@/components/ds";
+import { SectionHeader } from "@/components/ds";
 import { FaqAccordion } from "@/components/FaqAccordion";
 import { JsonLd } from "@/components/JsonLd";
-import { PricingCard } from "@/components/PricingCard";
+import { PricingPlanRow } from "@/components/PricingPlanRow";
 import { Reveal } from "@/components/Reveal";
 import { Section } from "@/components/Section";
 import { StickyMobileCta } from "@/components/StickyMobileCta";
 import { Eyebrow } from "@/components/Eyebrow";
 import { addOns, diagnosticOffer, faqs, plans, pricingPage } from "@/content/pricing";
-import { images } from "@/content/images";
-import { layout } from "@/lib/design-system/layout";
 import { createPageMetadata } from "@/lib/metadata";
 import { faqPageSchema } from "@/lib/schema";
 
@@ -26,17 +24,24 @@ export default function PricingPage() {
   return (
     <>
       <JsonLd data={faqPageSchema(faqs)} />
-      <Section hero>
-        <PageHero
+      <Section hero tightBottom>
+        <SectionHeader
           eyebrow={pricingPage.eyebrow}
           headline={pricingPage.headline}
-          intro={pricingPage.entityIntro}
           subhead={pricingPage.subhead}
-          image={images.pricing.hero}
+          spaced={false}
         />
       </Section>
 
-      <Section background="warm" spacing="compact" className="!pt-0">
+      <Section background="white" spacing="intro">
+        <div className="flex flex-col gap-10 md:gap-12">
+          {plans.map((plan, index) => (
+            <PricingPlanRow key={plan.name} plan={plan} index={index} />
+          ))}
+        </div>
+      </Section>
+
+      <Section background="warm" spacing="compact">
         <Reveal>
           <div className="card mx-auto max-w-3xl border-brick">
             <Eyebrow className="mb-2 block">{pricingPage.diagnosticHeadline}</Eyebrow>
@@ -67,15 +72,6 @@ export default function PricingPage() {
             </div>
           </div>
         </Reveal>
-      </Section>
-
-      <Section background="pinstripe">
-        <SectionHeader headline="Monthly plans" />
-        <div className={layout.gridCardsLg}>
-          {plans.map((plan, index) => (
-            <PricingCard key={plan.name} plan={plan} index={index} />
-          ))}
-        </div>
       </Section>
 
       <Section>

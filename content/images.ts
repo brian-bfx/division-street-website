@@ -6,6 +6,8 @@ export type ImageSlot = {
   aspect: ImageAspect;
   src?: string;
   alt?: string;
+  /** Optional Pexels search override — used in dev when no src is set */
+  pexelsQuery?: string;
 };
 
 export const images = {
@@ -13,8 +15,8 @@ export const images = {
     hero: {
       label: "Hero photo",
       hint: "Warm street-level shot of Wicker Park — storefronts, sidewalk, neighborhood energy",
+      pexelsQuery: "chicago neighborhood storefront street shops",
       aspect: "hero",
-      src: "/images/home-hero.svg",
       alt: "Wicker Park neighborhood storefronts",
     },
     whatWeDo: [
@@ -43,20 +45,6 @@ export const images = {
       aspect: "card",
       alt: "Local shops in the Wicker Park area",
     },
-    socialProof: [
-      {
-        label: "Client photo 1",
-        hint: "Portrait of a business owner in their shop — warm, natural light",
-        aspect: "portrait",
-        alt: "Division Street Digital client",
-      },
-      {
-        label: "Client photo 2",
-        hint: "Portrait of a second business owner — different trade, same neighborhood feel",
-        aspect: "portrait",
-        alt: "Division Street Digital client",
-      },
-    ] satisfies ImageSlot[],
     closingCta: {
       label: "Closing CTA photo",
       hint: "Owner opening shop in the morning, or welcoming a customer at the door",
@@ -70,6 +58,26 @@ export const images = {
       hint: "Clean shot of a thriving local storefront — communicates value without stock-photo vibes",
       aspect: "hero",
       alt: "Thriving local business storefront",
+    },
+    plans: {
+      presence: {
+        label: "Presence plan",
+        hint: "Owner checking Google Maps on phone outside their shop",
+        aspect: "card",
+        alt: "Local business owner checking Google profile",
+      },
+      presenceSocial: {
+        label: "Presence + Social plan",
+        hint: "Candid product or behind-the-counter shot that feels like a real social post",
+        aspect: "card",
+        alt: "Small business social media content",
+      },
+      growth: {
+        label: "Growth plan",
+        hint: "Busy shop with customers — growth and momentum",
+        aspect: "card",
+        alt: "Thriving local business with customers",
+      },
     },
   },
   stories: {
@@ -119,6 +127,7 @@ export const images = {
       label: "Founder portrait",
       hint: "Brian in the neighborhood or at a client shop — natural light, candid",
       aspect: "portrait",
+      src: "/images/about/brian-feener.png",
       alt: "Brian Feener, founder of Division Street Digital",
     },
     process: {
@@ -214,6 +223,54 @@ export const images = {
       hint: "Chicago Ave or Grand Ave independent shops",
       aspect: "hero",
       alt: "West Town Chicago",
+    },
+    "lincoln-park": {
+      label: "Lincoln Park",
+      hint: "Armitage boutique row or Clark St restaurant scene",
+      aspect: "hero",
+      alt: "Lincoln Park Chicago",
+    },
+    lakeview: {
+      label: "Lakeview",
+      hint: "Broadway or Belmont corridor shops and restaurants",
+      aspect: "hero",
+      alt: "Lakeview Chicago",
+    },
+    andersonville: {
+      label: "Andersonville",
+      hint: "Clark St boutique and restaurant row",
+      aspect: "hero",
+      alt: "Andersonville Chicago",
+    },
+    ravenswood: {
+      label: "Ravenswood",
+      hint: "Lincoln Ave shops near Montrose corridor",
+      aspect: "hero",
+      alt: "Ravenswood Chicago",
+    },
+    "humboldt-park": {
+      label: "Humboldt Park",
+      hint: "Division St or Paseo Boricua commercial strip",
+      aspect: "hero",
+      alt: "Humboldt Park Chicago",
+    },
+    pilsen: {
+      label: "Pilsen",
+      hint: "18th St murals and restaurant corridor",
+      aspect: "hero",
+      alt: "Pilsen Chicago",
+    },
+    "lincoln-square": {
+      label: "Lincoln Square",
+      hint: "Lincoln Ave restaurant and retail corridor",
+      aspect: "hero",
+      alt: "Lincoln Square Chicago",
+    },
+    "roscoe-village": {
+      label: "Roscoe Village",
+      hint: "Roscoe St boutique row or family-oriented shops",
+      aspect: "hero",
+      alt: "Roscoe Village Chicago",
     },
   },
   blog: {

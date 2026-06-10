@@ -55,7 +55,7 @@ export default function BlogPostPage({ params }: Props) {
     <>
       <JsonLd data={schemaData} />
 
-      <Section hero>
+      <Section hero tightBottom>
         <PageHero
           breadcrumbs={[
             { name: "Blog", path: "/blog" },
@@ -69,7 +69,7 @@ export default function BlogPostPage({ params }: Props) {
         />
       </Section>
 
-      <Section background="warm" spacing="compact" className="!pt-0">
+      <Section background="warm" spacing="intro">
         <div className="mx-auto max-w-prose space-y-10">
           {post.sections.map((section) => (
             <section key={section.heading}>

@@ -73,7 +73,7 @@ export default function ServiceDetailPage({ params }: Props) {
         ]}
       />
 
-      <Section hero>
+      <Section hero tightBottom>
         <PageHero
           breadcrumbs={[
             { name: "Services", path: "/services" },
@@ -86,7 +86,7 @@ export default function ServiceDetailPage({ params }: Props) {
         />
       </Section>
 
-      <Section background="warm" spacing="compact" className="!pt-0">
+      <Section background="warm" spacing="intro">
         <div className="mx-auto max-w-prose space-y-6 text-base leading-relaxed text-navy/80">
           {service.paragraphs.map((p) => (
             <p key={p.slice(0, 40)}>{p}</p>

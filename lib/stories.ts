@@ -18,15 +18,33 @@ export function getAllStorySlugs(): string[] {
   return stories.map((s) => s.slug);
 }
 
-export function getSocialProofQuotes() {
-  return stories
-    .filter((s) => !isPlaceholderStory(s))
-    .slice(0, 2)
-    .map((s) => ({
-      quote: s.quote,
-      attribution: s.quoteAttribution,
-      business: s.business,
-    }));
+export function formatCaseNumber(index: number): string {
+  return String(index + 1).padStart(2, "0");
+}
+
+export function parseQuoteAttribution(
+  attribution: string,
+  fallbackTitle?: string,
+): { name: string; title: string } {
+  const commaIndex = attribution.indexOf(",");
+  if (commaIndex === -1) {
+    return {
+      name: attribution.trim(),
+      title: fallbackTitle ?? "",
+    };
+  }
+
+  const name = attribution.slice(0, commaIndex).trim();
+  const title = attribution.slice(commaIndex + 1).trim();
+
+  return {
+    name,
+    title: title || fallbackTitle || "",
+  };
+}
+
+export function storyDisplayQuote(story: Story, variant: "short" | "full" = "short") {
+  return variant === "full" ? story.quote : story.shortQuote;
 }
 
 export function storyLocation(story: Story): string {

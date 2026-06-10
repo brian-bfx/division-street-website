@@ -8,7 +8,15 @@ export const aboutPage = {
   founder: {
     name: "Brian Feener",
     role: "Founder",
-    bio: "Brian started Division Street Digital after seeing too many great neighborhood shops struggle online — not because their product was wrong, but because their Google profile was empty, their reviews were stale, and their social accounts looked abandoned. He built this agency to do the local marketing work that actually moves the needle for small businesses: Google visibility, reviews, social presence, and the basics done consistently.",
+    whyStarted:
+      "I started Division Street Digital because I kept meeting neighborhood business owners who were losing customers online — not to bigger competitors with better products, but to empty Google profiles, neglected reviews, and websites that never quite worked. They didn't need a national agency or a six-figure retainer. They needed someone who could build a local marketing system that actually drives calls, visits, and bookings — and explain it in plain language.",
+    bio: "For more than 20 years, I've helped businesses get found, look professional, and grow online — from websites and e-commerce to the local search and reputation work that decides who customers call first. I hold an MBA and have spent my career at the intersection of strategy and execution: not just recommending what to fix, but rolling up my sleeves and doing it with you.",
+    credentials: [
+      "20+ years in digital marketing & web strategy",
+      "MBA",
+      "Websites, e-commerce & local search",
+      "Based in Chicago — Wicker Park & nearby neighborhoods",
+    ],
   },
   whyNeighborhood: {
     headline: "Why Wicker Park?",

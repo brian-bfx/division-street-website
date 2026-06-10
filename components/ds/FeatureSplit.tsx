@@ -1,5 +1,5 @@
 import type { ImageSlot } from "@/content/images";
-import { MediaImage } from "./MediaImage";
+import { ResolvedMediaImage } from "./ResolvedMediaImage";
 
 type FeatureSplitProps = {
   image: ImageSlot;
@@ -19,7 +19,7 @@ export function FeatureSplit({
   className = "",
 }: FeatureSplitProps) {
   const imageEl = (
-    <MediaImage
+    <ResolvedMediaImage
       {...image}
       pattern={imagePattern}
       priority={imagePriority}

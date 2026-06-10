@@ -1,21 +1,18 @@
 import { AreaServiceCrossLinks } from "@/components/AreaServiceCrossLinks";
 import { Button } from "@/components/Button";
+import { CaseStudies } from "@/components/CaseStudies";
 import { Eyebrow } from "@/components/Eyebrow";
 import {
+  BackgroundHero,
   FeatureSplit,
-  ImageCard,
-  PageHero,
   SectionHeader,
 } from "@/components/ds";
-import { MediaImage } from "@/components/ds/MediaImage";
-import { Reveal } from "@/components/Reveal";
+import { ExpertiseAccordion } from "@/components/ExpertiseAccordion";
 import { Section } from "@/components/Section";
 import { home } from "@/content/home";
 import { images } from "@/content/images";
-import { plans } from "@/content/pricing";
 import { site } from "@/content/site";
-import { getSocialProofQuotes } from "@/lib/stories";
-import { layout } from "@/lib/design-system/layout";
+import { buildExpertiseFromHome } from "@/lib/expertise";
 import { createPageMetadata } from "@/lib/metadata";
 
 export const metadata = createPageMetadata({
@@ -29,41 +26,28 @@ export const metadata = createPageMetadata({
   ],
 });
 
-export default function HomePage() {
-  const quotes = getSocialProofQuotes();
+export default async function HomePage() {
+  const expertiseItems = await buildExpertiseFromHome(home.whatWeDo.items);
 
   return (
     <>
-      <Section hero>
-        <PageHero
-          headline={home.hero.headline}
-          intro={home.hero.entityIntro}
-          subhead={home.hero.subhead}
-          image={images.home.hero}
-          imagePriority
-          layout="split"
-          align="left"
-          primaryCta={home.hero.primaryCta}
-          secondaryCta={home.hero.secondaryCta}
-        />
-      </Section>
+      <BackgroundHero
+        headline={home.hero.headline}
+        intro={home.hero.entityIntro}
+        image={images.home.hero}
+        imagePriority
+        align="left"
+        primaryCta={home.hero.primaryCta}
+        secondaryCta={home.hero.secondaryCta}
+      />
 
       <Section background="warm">
-        <SectionHeader headline={home.whatWeDo.eyebrow} />
-        <div className={`${layout.gridCardsLg}`}>
-          {home.whatWeDo.items.map((item, i) => (
-            <Reveal key={item.title} delay={i * 80}>
-              <ImageCard image={images.home.whatWeDo[i]} imagePattern="card">
-                <h3 className="font-display text-xl font-semibold text-navy md:text-2xl">
-                  {item.title}
-                </h3>
-                <p className="mt-4 text-base leading-relaxed text-navy/70">
-                  {item.body}
-                </p>
-              </ImageCard>
-            </Reveal>
-          ))}
-        </div>
+        <SectionHeader
+          align="left"
+          eyebrow={home.whatWeDo.eyebrow}
+          headline="How we help neighborhood businesses grow"
+        />
+        <ExpertiseAccordion items={expertiseItems} defaultOpenIndex={0} />
       </Section>
 
       <Section>
@@ -87,73 +71,7 @@ export default function HomePage() {
       </Section>
 
       <Section background="warm">
-        <SectionHeader headline={home.socialProof.headline} />
-        <div className={`${layout.gridCards}`}>
-          {images.home.socialProof.map((img, i) => (
-            <Reveal key={img.label} delay={i * 80}>
-              <div className="card flex flex-col gap-8 sm:flex-row">
-                <MediaImage
-                  {...img}
-                  pattern="portrait"
-                  className="w-full shrink-0 sm:w-36"
-                />
-                <div className="flex flex-1 flex-col justify-center">
-                  {quotes[i] ? (
-                    <blockquote>
-                      <p className="font-display text-lg leading-snug text-navy">
-                        &ldquo;{quotes[i].quote}&rdquo;
-                      </p>
-                      <footer className="mt-4 text-base text-navy/60">
-                        — {quotes[i].attribution}
-                      </footer>
-                    </blockquote>
-                  ) : (
-                    <p className="text-base italic leading-relaxed text-navy/50">
-                      {home.socialProof.emptyNote}
-                    </p>
-                  )}
-                </div>
-              </div>
-            </Reveal>
-          ))}
-        </div>
-      </Section>
-
-      <Section background="pinstripe">
-        <SectionHeader
-          eyebrow={home.pricingTeaser.eyebrow}
-          headline={home.pricingTeaser.headline}
-          subhead={home.pricingTeaser.note}
-        />
-        <div className={`${layout.gridCardsLg}`}>
-          {plans.map((plan, i) => (
-            <Reveal key={plan.name} delay={i * 80}>
-              <div
-                className={`card text-center transition-all duration-micro hover:-translate-y-0.5 hover:shadow-card-hover ${
-                  plan.isPopular ? "border-brick" : ""
-                }`}
-              >
-                {plan.isPopular && (
-                  <Eyebrow className="mb-2 block">Most popular</Eyebrow>
-                )}
-                <h3 className="text-display-subsection">
-                  {plan.name}
-                </h3>
-                <p className="mt-4 font-display text-type-section font-semibold text-navy font-tnum">
-                  {plan.price}
-                  <span className="text-base font-normal text-navy/60">
-                    {plan.cadence}
-                  </span>
-                </p>
-              </div>
-            </Reveal>
-          ))}
-        </div>
-        <Reveal delay={240} className="mt-12 text-center">
-          <Button href={home.pricingTeaser.cta.href} variant="secondary">
-            {home.pricingTeaser.cta.label}
-          </Button>
-        </Reveal>
+        <CaseStudies />
       </Section>
 
       <AreaServiceCrossLinks />

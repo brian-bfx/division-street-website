@@ -1,11 +1,13 @@
 import Link from "next/link";
 import { CookieSettingsButton } from "@/components/CookieSettingsButton";
+import { MadeInChicago } from "@/components/MadeInChicago";
 import { site } from "@/content/site";
+import { layout } from "@/lib/design-system/layout";
 
 export function Footer() {
   return (
     <footer className="border-t border-navy/10 bg-navy text-white">
-      <div className="mx-auto max-w-content px-6 py-16 sm:px-8 lg:px-10 lg:py-20">
+      <div className={`py-20 lg:py-24 ${layout.containerSafe}`}>
         <div className="flex flex-col gap-10 md:flex-row md:items-start md:justify-between">
           <div>
             <p className="font-display text-sm font-medium tracking-eyebrow">
@@ -67,9 +69,12 @@ export function Footer() {
           </nav>
         </div>
 
-        <p className="mt-12 border-t border-white/10 pt-8 text-center text-sm text-white/50">
-          &copy; {new Date().getFullYear()} {site.name}. All rights reserved.
-        </p>
+        <div className="mt-12 flex flex-col items-center gap-4 border-t border-white/10 pt-8 sm:flex-row sm:justify-between">
+          <p className="text-center text-sm text-white/50 sm:text-left">
+            &copy; {new Date().getFullYear()} {site.name}. All rights reserved.
+          </p>
+          <MadeInChicago variant="dark" className="justify-center" />
+        </div>
       </div>
     </footer>
   );

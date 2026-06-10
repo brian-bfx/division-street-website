@@ -1,69 +1,126 @@
+import type { ImageSlot } from "@/content/images";
+import { images } from "@/content/images";
+
+export type PlanFeature = {
+  title: string;
+  description: string;
+};
+
 export type Plan = {
   name: string;
   price: string;
   cadence: string;
   tagline: string;
-  features: string[];
+  features: PlanFeature[];
   isPopular: boolean;
   ctaLabel: string;
-  bestFor: string;
+  learnMoreLabel: string;
+  learnMoreHref: string;
+  image: ImageSlot;
 };
 
 export const plans: Plan[] = [
   {
     name: "Presence",
     price: "$250",
-    cadence: "/mo",
-    tagline: "Get found by the people already searching nearby.",
+    cadence: "/month",
+    tagline:
+      "Ideal for businesses that need to show up on Google and build trust through reviews.",
     features: [
-      "Google Business Profile setup & ongoing optimization",
-      "Review monitoring + responses to every review",
-      "Monthly review-request campaign to your customers",
-      "Local SEO basics so you rank in the neighborhood",
-      "1 Google post per week (offers, hours, updates)",
-      "Monthly one-page report — what changed, what's working",
+      {
+        title: "Google Business Profile",
+        description:
+          "Show up when neighbors search — we set up and keep your profile working for you.",
+      },
+      {
+        title: "Review monitoring & responses",
+        description:
+          "Every review gets a thoughtful reply so customers see you care.",
+      },
+      {
+        title: "Monthly review requests",
+        description:
+          "We nudge happy customers to leave reviews — the steady way to build trust.",
+      },
+      {
+        title: "Neighborhood SEO",
+        description:
+          "Rank for the searches that actually bring foot traffic in your area.",
+      },
     ],
     isPopular: false,
-    ctaLabel: "Get Started",
-    bestFor:
-      "Businesses that just need to show up and look great when people search.",
+    ctaLabel: "Select plan",
+    learnMoreLabel: "Learn more",
+    learnMoreHref: "/contact",
+    image: images.pricing.plans.presence,
   },
   {
     name: "Presence + Social",
     price: "$550",
-    cadence: "/mo",
-    tagline: "A social presence that looks like you actually have time for it.",
+    cadence: "/month",
+    tagline:
+      "Perfect for shops that want to look active and connected without lifting a finger.",
     features: [
-      "Everything in Presence, plus:",
-      "Managed Instagram + Facebook — 6 posts per month",
-      "Stories templates + monthly story content",
-      "Light photo direction (we tell you what to shoot, or shoot it)",
-      "Caption writing + local hashtags + community tagging",
-      "Comment & DM monitoring (Mon–Fri)",
-      "Monthly content calendar you approve in one click",
+      {
+        title: "Everything in Presence",
+        description:
+          "Google, reviews, and local SEO — the full foundation for getting found nearby.",
+      },
+      {
+        title: "Managed Instagram + Facebook",
+        description:
+          "Look active on social without living on your phone — six posts a month, written and scheduled.",
+      },
+      {
+        title: "Content calendar",
+        description:
+          "Know what's going out before it goes live — one-click approval on your monthly calendar.",
+      },
+      {
+        title: "Comment & DM monitoring",
+        description:
+          "We watch your inbox Mon–Fri so customers get a reply even when you're with a client.",
+      },
     ],
     isPopular: true,
-    ctaLabel: "Get Started",
-    bestFor:
-      "Shops that want to look active and connected without lifting a finger.",
+    ctaLabel: "Select plan",
+    learnMoreLabel: "Learn more",
+    learnMoreHref: "/contact",
+    image: images.pricing.plans.presenceSocial,
   },
   {
     name: "Growth",
     price: "$1,200",
-    cadence: "/mo",
-    tagline: "Paid campaigns and email/SMS to actually grow.",
+    cadence: "/month",
+    tagline:
+      "Designed for businesses with a growth goal — more locations, slow days to fill, or a new line to launch.",
     features: [
-      "Everything in Presence + Social, plus:",
-      "Local Meta + Google ad management (ad spend billed separately)",
-      "Email & SMS list building (in-store + online signups)",
-      "2 email or SMS campaigns per month",
-      "Seasonal campaign planning (holidays, slow seasons, events)",
-      "Monthly strategy call",
+      {
+        title: "Everything in Presence + Social",
+        description:
+          "Google, reviews, social, and content — the full local marketing stack in one plan.",
+      },
+      {
+        title: "Paid ad management",
+        description:
+          "Local Meta and Google campaigns managed for you — ad spend billed separately.",
+      },
+      {
+        title: "Email & SMS campaigns",
+        description:
+          "Two campaigns a month to bring regulars back and fill slow weeks.",
+      },
+      {
+        title: "Monthly strategy call",
+        description:
+          "A dedicated check-in to review what's working and plan the next move together.",
+      },
     ],
     isPopular: false,
-    ctaLabel: "Get Started",
-    bestFor:
-      "Businesses with a growth goal — a second location, slow weekdays to fill, a new product line.",
+    ctaLabel: "Select plan",
+    learnMoreLabel: "Learn more",
+    learnMoreHref: "/contact",
+    image: images.pricing.plans.growth,
   },
 ];
 
@@ -150,10 +207,9 @@ export const faqs: Faq[] = [
 
 export const pricingPage = {
   eyebrow: "Pricing",
-  headline: "More calls, visits, and bookings — pick your starting point",
-  entityIntro:
-    "Division Street Digital helps Chicago neighborhood businesses get found, trusted, and contacted across Google, Maps, reviews, ads, and your website. Start with a one-time audit or jump into a month-to-month plan.",
-  subhead: "Not sure where to start? Begin with a Local Visibility Audit. Cancel monthly plans anytime with 30 days' notice.",
+  headline: "Flexible plans",
+  subhead:
+    "Choose the right plan for your neighborhood business. Month-to-month — cancel anytime with 30 days' notice.",
   diagnosticHeadline: "Start with clarity",
   diagnosticNote:
     "A one-time audit that shows you exactly where local customers are dropping off — before you spend more on ads or SEO.",

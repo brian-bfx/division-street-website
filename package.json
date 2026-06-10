@@ -6,7 +6,9 @@
     "dev": "next dev -p 3000",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "pexels:warm": "npx tsx --env-file=.env.local scripts/warm-pexels-cache.ts",
+    "setup:hooks": "git config core.hooksPath .githooks && chmod +x .githooks/pre-commit && echo 'Git hooks installed — .env.local commits will be blocked.'"
   },
   "dependencies": {
     "framer-motion": "^12.40.0",

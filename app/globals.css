@@ -49,12 +49,12 @@
 
   /* Card base — soft elevation, approachable radius */
   .card {
-    @apply rounded-card-lg border border-navy/10 bg-white p-8 shadow-card transition-all duration-micro md:p-10;
+    @apply rounded-card-lg border border-navy/10 bg-white p-10 shadow-card transition-all duration-micro md:p-12;
   }
 
   /* Content block below a section header */
   .section-content {
-    @apply mt-14 md:mt-16;
+    @apply mt-16 md:mt-20;
   }
 
   .card-interactive {
@@ -72,5 +72,16 @@
 
   .form-error {
     @apply mt-2 text-sm text-brick;
+  }
+
+  .client-stories-scroll {
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: max(2rem, env(safe-area-inset-left));
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .client-stories-scroll::-webkit-scrollbar {
+    display: none;
   }
 }

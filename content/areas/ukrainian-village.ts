@@ -3,6 +3,7 @@ import type { Area } from "./types";
 export const ukrainianVillage: Area = {
   slug: "ukrainian-village",
   name: "Ukrainian Village",
+  region: "West Town",
   headline: "Marketing for Ukrainian Village Small Businesses",
   metaDescription:
     "Local marketing for Ukrainian Village, Chicago small businesses. Local SEO, Google Business Profile, social media, and reviews for shops along Chicago Ave and Division St.",
@@ -25,7 +26,6 @@ export const ukrainianVillage: Area = {
     "reviews-reputation",
     "websites",
   ],
-  featuredStorySlug: "ukrainian-village-threads",
   faqs: [
     {
       question: "Do you serve Ukrainian Village businesses?",

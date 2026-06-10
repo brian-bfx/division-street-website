@@ -6,6 +6,7 @@ export const radii = {
   button: "8px",
   card: "12px",
   cardLg: "16px",
+  photo: "6px",
 } as const;
 
 export const shadows = {
@@ -15,15 +16,15 @@ export const shadows = {
 
 /** Vertical rhythm — matches Section padding */
 export const spacing = {
-  sectionY: "5rem",
-  sectionYMd: "7rem",
-  sectionYLg: "8rem",
-  sectionHeroY: "6rem",
-  sectionHeroYMd: "8rem",
+  sectionY: "6rem",
+  sectionYMd: "8rem",
+  sectionYLg: "10rem",
+  sectionHeroY: "7rem",
+  sectionHeroYMd: "9rem",
   stackGap: "2rem",
   stackGapMd: "2.5rem",
-  cardPadding: "2rem",
-  cardPaddingMd: "2.5rem",
+  cardPadding: "2.5rem",
+  cardPaddingMd: "3rem",
 } as const;
 
 export const maxWidth = {

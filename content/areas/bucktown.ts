@@ -3,6 +3,7 @@ import type { Area } from "./types";
 export const bucktown: Area = {
   slug: "bucktown",
   name: "Bucktown",
+  region: "Near Northwest Side",
   headline: "Marketing for Bucktown Small Businesses",
   metaDescription:
     "Local marketing for Bucktown, Chicago small businesses. Google Business Profile, local SEO, social media, and reviews for shops along Armitage, Damen, and the Bucktown corridor.",
@@ -25,7 +26,6 @@ export const bucktown: Area = {
     "social-media",
     "reviews-reputation",
   ],
-  featuredStorySlug: "bucktown-bark-bone",
   faqs: [
     {
       question: "Do you work with Bucktown businesses?",

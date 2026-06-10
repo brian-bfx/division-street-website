@@ -45,7 +45,7 @@ export function MediaImage({
 }: MediaImageProps) {
   const aspectClass = aspectClasses[aspect];
   const sizes = imageSizes[pattern];
-  const radius = rounded ? "rounded-card-lg" : "rounded-none";
+  const radius = rounded ? "rounded-photo" : "rounded-none";
 
   if (src) {
     return (

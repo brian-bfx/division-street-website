@@ -11,6 +11,7 @@ import { getAllAreaSlugs, getAreaBySlug } from "@/content/areas";
 import { getAreaImage } from "@/content/images";
 import { getServiceBySlug } from "@/content/services";
 import { getStoryBySlug, storyResult } from "@/lib/stories";
+import { layout } from "@/lib/design-system/layout";
 import { createPageMetadata } from "@/lib/metadata";
 import { faqPageSchema } from "@/lib/schema";
 
@@ -69,7 +70,7 @@ export default function AreaDetailPage({ params }: Props) {
     <>
       <JsonLd data={faqPageSchema(area.faqs)} />
 
-      <Section hero>
+      <Section hero tightBottom>
         <PageHero
           breadcrumbs={[
             { name: "Areas", path: "/areas" },
@@ -82,13 +83,13 @@ export default function AreaDetailPage({ params }: Props) {
         />
       </Section>
 
-      <Section background="warm" spacing="compact" className="!pt-0">
+      <Section background="warm" spacing="intro">
         <div className="mx-auto max-w-prose space-y-6 text-base leading-relaxed text-navy/80">
           <p>{area.context}</p>
           <p>{area.landmarks}</p>
         </div>
 
-        <Reveal className="mt-14 md:mt-16">
+        <Reveal className={layout.sectionContent}>
           <SectionHeader headline={`Businesses we help in ${area.name}`} />
           <ul className="mt-6 flex flex-wrap justify-center gap-3">
             {area.businessTypes.map((type) => (

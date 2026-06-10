@@ -35,7 +35,7 @@ export default function BlogPage() {
 
   return (
     <>
-      <Section hero>
+      <Section hero tightBottom>
         <PageHero
           breadcrumbs={[{ name: "Blog", path: "/blog" }]}
           eyebrow={blogHub.eyebrow}
@@ -46,7 +46,7 @@ export default function BlogPage() {
         />
       </Section>
 
-      <Section background="warm" className="!pt-0">
+      <Section background="warm" spacing="intro">
         <div className={layout.gridCards}>
           {sorted.map((post, i) => (
             <Reveal key={post.slug} delay={i * 80}>

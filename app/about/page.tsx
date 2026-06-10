@@ -1,7 +1,7 @@
 import { Button } from "@/components/Button";
 import { Eyebrow } from "@/components/Eyebrow";
 import { FeatureSplit, PageHero, SectionHeader } from "@/components/ds";
-import { MediaImage } from "@/components/ds/MediaImage";
+import { ResolvedMediaImage } from "@/components/ds/ResolvedMediaImage";
 import { Reveal } from "@/components/Reveal";
 import { Section } from "@/components/Section";
 import { aboutPage } from "@/content/about";
@@ -24,7 +24,7 @@ export const metadata = createPageMetadata({
 export default function AboutPage() {
   return (
     <>
-      <Section hero>
+      <Section hero tightBottom>
         <PageHero
           breadcrumbs={[{ name: "About", path: "/about" }]}
           eyebrow={aboutPage.eyebrow}
@@ -44,6 +44,19 @@ export default function AboutPage() {
           <Eyebrow className="mb-4">Founder</Eyebrow>
           <h2 className="text-display-section">{aboutPage.founder.name}</h2>
           <p className="mt-2 text-base text-navy/60">{aboutPage.founder.role}</p>
+          <ul className="mt-6 flex flex-wrap gap-2">
+            {aboutPage.founder.credentials.map((credential) => (
+              <li
+                key={credential}
+                className="rounded-full border border-navy/10 bg-white px-3 py-1.5 text-sm text-navy/80"
+              >
+                {credential}
+              </li>
+            ))}
+          </ul>
+          <p className="mt-8 text-base leading-relaxed text-navy/80 md:text-lg">
+            {aboutPage.founder.whyStarted}
+          </p>
           <p className="mt-6 text-base leading-relaxed text-navy/80">
             {aboutPage.founder.bio}
           </p>
@@ -85,7 +98,7 @@ export default function AboutPage() {
       <Section>
         <SectionHeader headline={aboutPage.process.headline} />
         <div>
-          <MediaImage
+          <ResolvedMediaImage
             {...images.about.process}
             pattern="card"
             className="mx-auto mb-14 max-w-2xl md:mb-16"

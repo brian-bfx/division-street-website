@@ -13,7 +13,7 @@ export const metadata = createPageMetadata({
 export default function PrivacyPage() {
   return (
     <>
-      <Section hero spacing="compact">
+      <Section hero spacing="compact" tightBottom>
         <PageHero
           eyebrow={privacyPage.eyebrow}
           headline={privacyPage.headline}
@@ -22,7 +22,7 @@ export default function PrivacyPage() {
         />
       </Section>
 
-      <Section background="warm" spacing="compact" className="!pt-0">
+      <Section background="warm" spacing="intro">
         <div className="mx-auto max-w-prose space-y-8">
           {privacyPage.sections.map((section, i) => (
             <Reveal key={section.title} delay={i * 80}>
