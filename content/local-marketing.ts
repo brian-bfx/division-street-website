@@ -125,6 +125,7 @@ export const localMarketing = {
           "Ad visibility check",
           "Tracking gaps identified",
           "30-day local demand plan",
+          "Fee waived with 1-year commitment",
         ],
         cta: { label: "Request an audit", href: "/contact" },
         featured: true,

@@ -158,6 +158,7 @@ export const diagnosticOffer: DiagnosticOffer = {
     "Ad visibility check",
     "Tracking gaps identified",
     "30-day local demand action plan",
+    "Fee waived with 1-year commitment",
   ],
   ctaLabel: "Request an audit",
   ctaHref: "/contact",
