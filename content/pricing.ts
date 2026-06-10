@@ -81,6 +81,11 @@ export const plans: Plan[] = [
         description:
           "We watch your inbox Mon–Fri so customers get a reply even when you're with a client.",
       },
+      {
+        title: "Conversion tracking",
+        description:
+          "Calls, reservation form completions, and online order initiates — tied back to the campaigns driving them.",
+      },
     ],
     isPopular: true,
     ctaLabel: "Select plan",
